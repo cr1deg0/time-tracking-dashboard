@@ -13,20 +13,21 @@ const ActivityCard= (props) => {
         setMenuIsHovered(prevState => !prevState)
     }
 
-    const {cardColor, cardColorBackup, marginTop, imageName}=activityCardStyling(props.data.title);
+    const {cardColor, imageName}=activityCardStyling(props.data.title);
     
     return(
 
-        <section style={{background: cardColor, backgroundColor: cardColorBackup, marginTop: marginTop}} className="card">
+        <section style={{backgroundColor: cardColor}} className="card">
             <img src={`./images/icon-${imageName}.svg`} alt="" className="card--image"/>
             <div className="card--body" style={{backgroundColor: menuIsHovered && "var(--neutral-dark-blue)"}}>
                 <div className="card--header flex flex-align-center">
                     <h2 className="fs-500 fw-500">{props.data.title}</h2>
-                    <button onMouseEnter={handleMouseEvent} onMouseLeave={handleMouseEvent}>
+                    <a href="#" onMouseEnter={handleMouseEvent} onMouseLeave={handleMouseEvent}>
+                        <span className="sr-only">Menu</span>
                         <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg" className="card--header-menu-icon" alt="more details">
                             <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fillRule="evenodd"/>
                         </svg>
-                    </button>
+                    </a>
                 </div>
                 <div className="card--data flex flex-align-center">
                     <p className="fs-700 fw-300">{selectedTimeframeData.current}hrs</p>
