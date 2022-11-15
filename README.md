@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL]: (https://your-solution-url.com)
-- [Live Site]: (https://profound-custard-866ace.netlify.app/)
+- [Solution URL] (https://your-solution-url.com)
+- [Live Site] (https://profound-custard-866ace.netlify.app/)
 
 ## My process
 
