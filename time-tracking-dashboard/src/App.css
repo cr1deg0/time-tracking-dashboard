@@ -72,6 +72,17 @@
 .block {
   display: block;
 }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
 /***** Main Layout *****/
 .container {
@@ -183,12 +194,7 @@ header {
   justify-content: space-between;
   margin-bottom: 0.5em;
 }
-.card--header button {
-  background-color: inherit;
-  border: none;
-  display: flex;
-}
-.card--header button:focus-visible {
+.card--header a:focus-visible {
   outline: none;
   border: 2px solid var(--primary-red);
   padding: 0.2em;
@@ -204,7 +210,7 @@ header {
   cursor: pointer;
 }
 
-.card--header button:focus .card--header-menu-icon {
+.card--header a:focus .card--header-menu-icon {
   fill: white;
 }
 .card--data {
